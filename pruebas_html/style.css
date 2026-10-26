@@ -1,0 +1,27 @@
+body{
+    padding: 0;
+    text-decoration: none;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+}
+.nadvar{
+    margin: 5px;
+    display: flex;
+    gap: 10px;
+    text-align: center ;
+    cursor:pointer;
+    background-color: bisque;
+}
+.nadvar div:hover{
+    background-color: azure;
+    border: 2px solid rgb(0, 136, 255);
+}
+.nadvar div{
+    background-color:rgb(0, 136, 255); 
+    color: black;
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    
+}

@@ -1,0 +1,40 @@
+ENTEROS NUM = 1 MIN = 0 MAX = 0
+
+MIENTRAS NUM != 0
+    IMPRIMIR "Dame numero"
+    LEER NUM
+    SI NUM > MAX
+        MAX = NUM
+        SI MIN == 0
+            MIN = MAX
+    FSI
+    SI NUM < MIN y  NUM ¡=0
+        MIN = NUM
+    FSI
+FMINETRAS
+SI MAX != 0
+    IMPRIMIR "El maximo es "+ MAX
+IMPRIMIR "El minimo es "+ MIN
+
+
+---------------------------------------------------------
+
+ENTEROS NUM = 1 MIN = 0 MAX = 0
+
+IMPRIMIR "Dame numero"
+LEER NUM
+MAX = MUN
+MIN= NUM
+
+MIENTRAS NUM != 0
+    SI NUM > MAX
+        MAX = NUM
+    FSI
+    SI NUM < MIN
+        MIN = NUM
+    FSI
+    IMPRIMIR "Dame numero"
+    LEER NUM
+FMINETRAS
+IMPRIMIR "El maximo es "+ MAX
+IMPRIMIR "El minimo es "+ MIN

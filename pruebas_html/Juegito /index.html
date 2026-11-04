@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Última chispa · Roguelike</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header><span id="wallet" class="wallet"></span><button id="home">Menú</button><button id="pause"
+            title="Pausar (P)">Pausar</button></header>
+    <main>
+        <nav id="navigation" aria-label="Menú principal"></nav><section id="lobby"></section><div id="play-area">
+        <section class="arena"><canvas id="game"
+                aria-label="Arena de juego: moverse con WASD o flechas, apuntar con el ratón y mantener clic para disparar"
+                tabindex="0"></canvas>
+            <div class="hud">
+                <div><span class="label">INTEGRIDAD</span>
+                    <div id="health" role="progressbar" aria-label="Vida"><div id="health-fill"></div><span id="health-text"></span></div>
+                </div>
+                <div class="stats"><span id="wave"></span><span id="kills"></span><span id="time"></span><span id="run-coins"></span></div>
+            </div>
+            <div class="xp">
+                <div id="xpbar"></div>
+            </div>
+            <div id="overlay" class="overlay"></div>
+            <div class="level" id="level"></div>
+        </section>
+
+        </div>
+    </main>
+    <dialog id="menu-dialog" aria-label="Panel del menú"><button id="close-panel" class="close-panel">✕ Cerrar</button><section id="menu-content"></section></dialog>
+    <p id="save-status" role="status"></p>
+    <script src="pixel-art.js"></script>
+    <script src="terrain.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,451 @@
+:root {
+    color-scheme: dark;
+    font-family: system-ui, sans-serif;
+    color: #e5ede9;
+    background: #0b100f
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+header {
+    height: 76px;
+    border-bottom: 1px solid #25312b;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 5vw
+}
+
+.brand {
+    color: #dfffa0;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 17px
+}
+
+.tag,
+.label,
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #8c9e91
+}
+
+header button {
+    margin-left: auto
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: 1px solid #465442;
+    background: #1b261f;
+    color: #e3eddf;
+    border-radius: 6px;
+    padding: 10px 20px
+}
+
+button:hover {
+    border-color: #c0ef82;
+    background: #2c3c26
+}
+
+button:focus-visible {
+    outline: 2px solid #c7f28b;
+    outline-offset: 3px
+}
+
+main {
+    max-width: 1350px;
+    margin: auto;
+    padding: 28px 5vw
+}
+
+.intro {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 24px
+}
+
+.intro p {
+    color: #8c9e91;
+    font-size: 13px
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+    margin: 6px 0
+}
+
+.eyebrow {
+    color: #b3d78c !important;
+    font-size: 10px !important
+}
+
+.arena {
+    position: relative;
+    border: 1px solid #3a4939;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #121a17;
+    height: min(67vh, 680px);
+    min-height: 350px;
+    box-shadow: 0 24px 100px #0005
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    cursor: crosshair
+}
+
+.hud {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    right: 24px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none
+}
+
+.stats {
+    display: flex;
+    gap: 22px;
+    font-size: 12px;
+    color: #ccd5ca
+}
+
+.label {
+    display: block;
+    margin-bottom: 7px
+}
+
+#health {
+    font-size: 19px;
+    color: #d4fa9d;
+    letter-spacing: 4px
+}
+
+.xp {
+    position: absolute;
+    bottom: 0;
+    height: 4px;
+    background: #26362e;
+    width: 100%
+}
+
+#xpbar {
+    height: 100%;
+    background: #c7ef86;
+    width: 0%;
+    transition: width .15s
+}
+
+.level {
+    position: absolute;
+    bottom: 16px;
+    left: 24px;
+    color: #9ba991;
+    font-size: 11px;
+    letter-spacing: 2px;
+    pointer-events: none
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: #09110cce;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    backdrop-filter: blur(5px)
+}
+
+.overlay.hidden {
+    display: none
+}
+
+.panel {
+    max-width: 760px
+}
+
+.panel h2 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+    margin: 12px 0
+}
+
+.panel p {
+    color: #aab9ab;
+    line-height: 1.7;
+    font-size: 14px
+}
+
+.primary {
+    background: #d5f79f;
+    color: #16220e;
+    font-weight: 700;
+    border: 0;
+    margin-top: 15px;
+    padding: 14px 28px
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 26px
+}
+
+.card {
+    text-align: left;
+    padding: 24px 18px
+}
+
+.card b {
+    display: block;
+    font-size: 17px;
+    margin: 12px 0
+}
+
+.card small {
+    color: #abbba9;
+    line-height: 1.5;
+    display: block
+}
+
+.card em {
+    font-size: 25px;
+    color: #d7f7a3;
+    font-style: normal
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 22px;
+    color: #829083;
+    font-size: 11px
+}
+
+kbd {
+    font: 10px monospace;
+    border: 1px solid #344034;
+    border-radius: 3px;
+    padding: 4px 6px;
+    color: #c3cdbd;
+    margin-right: 5px
+}
+
+@media(max-width:650px) {
+
+    .tag,
+    .intro>p {
+        display: none
+    }
+
+    header {
+        padding: 0 20px
+    }
+
+    .brand {
+        font-size: 13px
+    }
+
+    main {
+        padding: 20px 12px
+    }
+
+    .stats {
+        gap: 10px;
+        font-size: 10px
+    }
+
+    .hud {
+        left: 14px;
+        right: 14px
+    }
+
+    .panel h2 {
+        font-size: 29px
+    }
+
+    .cards {
+        gap: 6px
+    }
+
+    .card {
+        padding: 12px 8px
+    }
+
+    .card b {
+        font-size: 13px
+    }
+
+    .card small {
+        font-size: 10px
+    }
+
+    h1 {
+        font-size: 27px
+    }
+}
+/* Pantalla completa y centro de progreso */
+main{max-width:none;padding:20px 0;margin:0;width:100%}header{padding:0 24px;gap:16px}header button{margin-left:0}.wallet{margin-left:auto;color:#f4cf78;font-weight:700;white-space:nowrap}.intro,footer{padding-left:24px;padding-right:24px}.arena{width:100%;height:calc(100dvh - 260px);min-height:360px;border-radius:0;border-left:0;border-right:0}#navigation{display:flex;gap:8px;padding:0 24px 20px;flex-wrap:wrap}#navigation button.active{background:#d5f79f;color:#16220e;border-color:#d5f79f}#lobby{padding:24px;max-width:1400px;margin:auto;min-height:70vh}#lobby h1{font-size:42px}#lobby p{color:#aab9ab;line-height:1.6}.collection{display:grid;grid-template-columns:repeat(auto-fit,minmax(225px,1fr));gap:18px;margin-top:24px}.hero-card{border:1px solid var(--rarity,#44533c);border-radius:12px;padding:24px;background:#141e18}.hero-card h2{margin:12px 0}.hero-card .portrait{font-size:48px;color:var(--rarity,#d5f79f);display:block}.rarity{color:var(--rarity,#d5f79f);font-size:11px;letter-spacing:2px;text-transform:uppercase}.hero-card p{min-height:48px;font-size:14px}.hero-card button{margin-top:12px}.hero-card.locked{opacity:.65}button:disabled{opacity:.4;cursor:default}.notice{padding:16px;border:1px solid #5f693e;background:#232d1d;border-radius:8px;margin:20px 0;color:#e5efc4}.muted{color:#9ca993}.big-portrait{font-size:100px;color:var(--rarity)}.result{margin-top:20px}.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.overlay{overflow-y:auto}.panel{margin:auto}.hud .stats{flex-wrap:wrap;justify-content:end}#health{max-width:45vw;overflow-wrap:anywhere}body.in-menu #pause{display:none}[hidden]{display:none!important}@media(max-width:650px){header{padding:12px;height:auto;flex-wrap:wrap;gap:8px}.brand{letter-spacing:1px}.wallet{font-size:13px}header button{padding:8px}#navigation{padding:0 12px 14px;gap:6px}#navigation button{padding:8px 10px;font-size:12px}#lobby{padding:16px}#lobby h1{font-size:30px}.arena{height:calc(100dvh - 290px)}.intro,footer{padding-left:12px;padding-right:12px}.cards{grid-template-columns:1fr}.overlay{align-items:start}.card b{display:inline;margin-left:10px}.card small{margin-top:8px}.panel{padding:12px 0}.stats{max-width:53%}}
+
+/* Menú vertical con identidad encima de Jugar. */
+body.in-menu main{display:grid;grid-template-columns:260px minmax(0,1fr);align-items:start;gap:12px;padding:24px}
+#navigation{flex-direction:column;flex-wrap:nowrap;padding:0;gap:10px;position:sticky;top:24px}
+.menu-brand{padding:12px 0 24px}.menu-brand .brand{font-size:16px;letter-spacing:2px;white-space:nowrap}.menu-brand .tag{display:block;margin-top:10px;font-size:10px;letter-spacing:2px}
+#navigation button{text-align:left;padding:15px 20px;font-size:14px}
+#navigation button[data-tab="jugar"]{background:#d5f79f;color:#16220e;border-color:#d5f79f;font-size:18px;font-weight:800;padding:19px 20px;box-shadow:0 5px 22px #b9e88818;margin-bottom:8px}
+#navigation button[data-tab="jugar"]:hover{background:#e3ffb9;box-shadow:0 5px 26px #b9e88830}.play-icon{display:inline-block;margin-right:10px}
+#lobby{width:100%;max-width:1400px;margin:0 auto;padding:12px 24px}#start-game{font-size:18px;min-width:170px}#start-game span{margin-right:8px}
+@media(max-width:800px){body.in-menu main{grid-template-columns:210px minmax(0,1fr);padding:16px 12px;gap:12px}.menu-brand .brand{font-size:13px;letter-spacing:1px}#lobby{padding:12px}.collection{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}}
+@media(max-width:520px){body.in-menu main{grid-template-columns:minmax(0,1fr)}#navigation{position:static;width:100%}.menu-brand{text-align:center;padding:4px 0 14px}.menu-brand .brand{font-size:17px}#navigation button{text-align:center}#lobby{padding:20px 0}#navigation button[data-tab="jugar"]{margin-bottom:0}}
+
+/* Paneles que se cierran antes de volver al refugio. */
+#menu-dialog{width:min(1100px,calc(100vw - 40px));max-height:calc(100dvh - 48px);padding:28px;border:1px solid #536448;border-radius:16px;background:#101a14;color:#e5ede9;box-shadow:0 24px 100px #0009;overflow:auto}
+#menu-dialog::backdrop{background:#050b08cc;backdrop-filter:blur(4px)}
+.close-panel{display:block;margin-left:auto;position:sticky;top:0;z-index:1;background:#243022}
+#menu-content{padding:8px 0 20px}#menu-content h1{font-size:36px;margin:8px 0}#menu-content p{color:#aab9ab;line-height:1.6}
+@media(max-width:520px){#menu-dialog{padding:16px;width:calc(100vw - 20px);max-height:calc(100dvh - 20px)}#menu-content h1{font-size:28px}}
+
+/* Durante la partida, el espacio disponible pertenece a la arena. */
+body:not(.in-menu) main{padding:0}
+body:not(.in-menu) .arena{height:calc(100dvh - 76px);min-height:300px}
+#save-status:empty{display:none}
+@media(max-width:650px){body:not(.in-menu) .arena{height:calc(100dvh - 64px)}}
+
+/* Barra de puntos de vida. */
+#health{position:relative;width:220px;max-width:40vw;height:24px;border:1px solid #99bd79;background:#242c26;border-radius:5px;overflow:hidden;letter-spacing:0;font-size:12px;color:#f3ffe7}
+#health-fill{height:100%;width:100%;background:linear-gradient(90deg,#508a55,#9fcf73);transition:width .15s}
+#health-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;text-shadow:0 1px 3px #000}
+
+/* Escalado nítido del lienzo de baja resolución. */
+#game{image-rendering:pixelated;image-rendering:crisp-edges}.arena{border-color:#52664a}#health,#health-fill{border-radius:0}
+
+/* Refugio pixel art: marcos duros, relieve por bloques y retratos de sprites. */
+:root{font-family:"Lucida Console","Courier New",monospace}
+body.in-menu{background-color:#102219;background-image:linear-gradient(45deg,#182e2055 25%,transparent 25%,transparent 75%,#182e2055 75%),linear-gradient(45deg,#182e2055 25%,transparent 25%,transparent 75%,#182e2055 75%);background-size:32px 32px;background-position:0 0,16px 16px}
+header{background:#0b1712;border-bottom:4px solid #344b36}
+button,.hero-card,.card,#menu-dialog,.notice{border-radius:0;border-width:2px}
+button{background:#273d2a;border-color:#78916a #14271c #14271c #78916a;box-shadow:inset 0 2px #435c3c,0 4px #08150e;font-weight:700;transition:background .1s}
+button:hover:not(:disabled){background:#385536;border-color:#b5d38a #253a25 #253a25 #b5d38a}
+button:active:not(:disabled){transform:translateY(2px);box-shadow:inset 0 2px #435c3c,0 2px #08150e}
+button:disabled{opacity:.55}button:focus-visible{outline:2px dashed #e2efac;outline-offset:4px}
+#navigation{padding:16px;background:#102016;border:2px solid #4b6347;box-shadow:4px 4px #07130c}
+.menu-brand .brand{font-size:15px;letter-spacing:1px;white-space:normal;line-height:1.6;color:#d8ed9d;text-shadow:2px 2px #405832}
+.menu-brand .tag{font-size:9px;letter-spacing:1px}.menu-brand{border-bottom:2px dashed #385038;margin-bottom:8px;padding-top:0;padding-bottom:16px}
+#navigation button[data-tab="jugar"],#navigation button.active,.primary{background:#c7df86;color:#17251a;border:2px solid;border-color:#e5f5b5 #617b40 #617b40 #e5f5b5;box-shadow:inset 0 2px #e5f5b5,0 4px #08150e}
+#navigation button[data-tab="jugar"]:hover{background:#e0efa3;box-shadow:inset 0 2px #f1ffcf,0 4px #08150e}
+#lobby h1,#menu-content h1,.panel h2{font-weight:900;letter-spacing:-1px;text-shadow:3px 3px #07140c;line-height:1.2}
+#lobby h1{font-size:36px}.hero-card{background:#15291e;border-color:var(--rarity,#607655);box-shadow:inset 0 0 0 4px #0b1b11,5px 5px #07150e;padding:24px}
+.hero-card h2{font-size:21px;color:#e5edc8}.hero-card p,.hero-card small,#lobby p,#menu-content p{line-height:1.7}.rarity{font-size:11px;letter-spacing:1px}
+.pixel-portrait{display:flex;align-items:center;justify-content:center;width:104px;height:104px;margin:20px 0;background:repeating-conic-gradient(#203b28 0 25%,#1b3323 0 50%) 0 0/16px 16px;border:2px solid var(--rarity,#769664);box-shadow:inset 0 0 0 4px #102017,4px 4px #0a170f}
+.pixel-portrait img{display:block;width:72px;height:72px;image-rendering:pixelated}.pixel-portrait.large{width:176px;height:176px}.pixel-portrait.large img{width:120px;height:120px}
+#menu-dialog{background:#11251a;border:4px solid #83966a;box-shadow:inset 0 0 0 4px #213d29,8px 8px #061008;padding:28px}
+#menu-dialog::backdrop{backdrop-filter:none;background:#030a07d9}.overlay{backdrop-filter:none;background:#06120de8}.card{background:#1e3525;box-shadow:inset 0 0 0 2px #3e5537,4px 4px #07140c}.card em{font-family:monospace}.close-panel{background:#34472d}
+#health-fill{background:#9fcf73}#xpbar{background:#32d9ff}.xp{height:6px;background:#123a48}.wallet{color:#f4d17d;text-shadow:2px 2px #443a20}
+@media(max-width:800px){#navigation{padding:12px}.menu-brand .brand{font-size:13px}#lobby h1{font-size:29px}}
+@media(max-width:520px){#lobby h1,#menu-content h1{font-size:26px}.hero-card{padding:20px}.menu-brand .brand{font-size:17px}}
+
+/* El refugio llena la ventana, también en pantallas altas. */
+html{min-height:100%}
+body{min-height:100dvh}
+body.in-menu{display:flex;flex-direction:column}
+body.in-menu header{flex-shrink:0}
+body.in-menu main{flex:1;align-items:stretch;grid-template-rows:1fr}
+body.in-menu #navigation{align-self:stretch;position:static}
+body.in-menu #lobby{max-width:none;min-height:0;display:flex;flex-direction:column}
+body.in-menu #lobby>.collection{flex:1;align-items:stretch}
+@media(max-width:520px){body.in-menu main{grid-template-rows:auto 1fr}body.in-menu #navigation{align-self:start}}
+
+/* Elección de nivel con tarjetas grandes y una posición más alta. */
+.overlay:has(.upgrade-panel){align-items:flex-start;padding:clamp(24px,6vh,64px) 32px 32px}
+.upgrade-panel{width:min(1200px,100%);max-width:1200px;margin:0 auto;padding:28px;background:#11251a;border:4px solid #83966a;box-shadow:inset 0 0 0 4px #213d29,8px 8px #061008}
+.upgrade-panel h2{font-size:clamp(32px,4vw,54px);margin:18px 0}.upgrade-panel>p{font-size:16px}
+.upgrade-panel .cards{gap:24px;margin-top:32px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.upgrade-panel .card{min-height:280px;padding:32px 24px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.upgrade-panel .card em{font-size:52px;line-height:1.2}.upgrade-panel .card b{display:block;font-size:23px;line-height:1.3;margin:24px 0 16px}.upgrade-panel .card small{font-size:16px;line-height:1.7}
+@media(max-width:800px){.overlay:has(.upgrade-panel){padding:24px 16px}.upgrade-panel{padding:20px}.upgrade-panel .cards{gap:12px}.upgrade-panel .card{min-height:240px;padding:20px 14px}.upgrade-panel .card b{font-size:18px}.upgrade-panel .card small{font-size:14px}}
+@media(max-width:600px){.upgrade-panel .cards{grid-template-columns:1fr;margin-top:20px}.upgrade-panel .card{min-height:150px;padding:20px}.upgrade-panel .card em{font-size:32px}.upgrade-panel .card b{margin:12px 0}.upgrade-panel>p{font-size:14px}}
+@media(max-height:650px) and (min-width:601px){.overlay:has(.upgrade-panel){padding-top:16px}.upgrade-panel{padding:16px}.upgrade-panel h2{font-size:32px;margin:10px 0}.upgrade-panel .cards{margin-top:16px}.upgrade-panel .card{min-height:200px;padding:20px}.upgrade-panel .card em{font-size:36px}.upgrade-panel .card b{margin:14px 0 10px}}
+
+/* Selección de nivel panorámica, con un encabezado directo. */
+.overlay:has(.upgrade-panel){padding:32px 24px}
+.upgrade-panel{width:100%;max-width:none;padding:28px 32px 32px}
+.upgrade-panel h2{margin:0 0 28px;font-size:clamp(30px,3.5vw,52px)}
+.upgrade-panel .level-number{color:#c7df86}
+.upgrade-panel .cards{margin-top:0;gap:24px}
+.upgrade-panel .card{min-height:300px;align-items:center;text-align:center}
+@media(max-width:800px){.overlay:has(.upgrade-panel){padding:20px 12px}.upgrade-panel{padding:24px 16px}.upgrade-panel .cards{gap:12px}.upgrade-panel .card{min-height:250px}}
+@media(max-width:600px){.upgrade-panel .card{min-height:160px}.upgrade-panel h2{margin-bottom:20px}}
+@media(max-height:650px) and (min-width:601px){.overlay:has(.upgrade-panel){padding:16px}.upgrade-panel{padding:20px}.upgrade-panel h2{margin-bottom:18px}.upgrade-panel .card{min-height:220px}}
+
+/* Selección alta: mantiene el ancho anterior y llena la altura de la arena. */
+.overlay:has(.upgrade-panel){padding:24px 32px;align-items:stretch}
+.upgrade-panel{width:min(1200px,100%);max-width:1200px;min-height:100%;display:flex;flex-direction:column;margin:0 auto;padding:32px}
+.upgrade-panel h2{flex-shrink:0;margin:0 0 28px}
+.upgrade-panel .cards{flex:1;min-height:0;align-items:stretch}
+.upgrade-panel .card{min-height:340px}
+@media(max-width:800px){.overlay:has(.upgrade-panel){padding:16px}.upgrade-panel{padding:24px 16px}.upgrade-panel .card{min-height:300px}}
+@media(max-width:600px){.upgrade-panel .card{min-height:180px}.upgrade-panel .cards{flex:initial}.upgrade-panel{min-height:100%}}
+@media(max-height:650px) and (min-width:601px){.overlay:has(.upgrade-panel){padding:12px 24px}.upgrade-panel{padding:20px}.upgrade-panel .card{min-height:200px}.upgrade-panel h2{margin-bottom:18px}}
+
+/* Contenido de las mejoras distribuido por toda la tarjeta. */
+.upgrade-panel .card{display:grid;grid-template-rows:minmax(100px,1.2fr) auto minmax(64px,.6fr) auto auto;justify-items:center;align-items:center;align-content:stretch;gap:22px;padding:32px 24px;text-align:center}
+.upgrade-panel .card .upgrade-icon{display:flex;align-items:center;justify-content:center;width:112px;height:112px;font-size:72px;background:repeating-conic-gradient(#263f2c 0 25%,#213725 0 50%) 0 0/16px 16px;border:3px solid #76915b;box-shadow:6px 6px #102017,inset 0 0 0 4px #182b1d;text-shadow:4px 4px #324b27}
+.upgrade-panel .card b{font-size:clamp(22px,2vw,30px);margin:0;line-height:1.3}
+.upgrade-panel .card small{font-size:18px;line-height:1.6;margin:0;color:#cbd8be}
+.upgrade-stat{display:block;align-self:end;width:100%;padding:20px 8px;border-top:2px solid #536f45;border-bottom:2px solid #536f45;background:#12261b}
+.stat-label{display:block;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:#a8bd96;margin-bottom:14px}
+.stat-change{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;font-size:clamp(16px,1.5vw,23px);color:#9ba98e}.stat-change strong{color:#e2f5ae;font-size:inherit}.stat-arrow{color:#8eaf71}
+.pick-upgrade{display:block;width:100%;padding:15px 8px;background:#c7df86;border:2px solid;border-color:#e6f6b7 #698446 #698446 #e6f6b7;color:#17251a;font-size:17px}
+.upgrade-panel .card:hover .pick-upgrade{background:#e0f3a0}
+@media(max-width:800px){.upgrade-panel .card{gap:16px;padding:24px 14px}.upgrade-panel .card .upgrade-icon{width:88px;height:88px;font-size:56px}.upgrade-panel .card small{font-size:15px}.upgrade-stat{padding:16px 6px}.stat-change{gap:8px}.pick-upgrade{font-size:14px}}
+@media(max-width:600px){.upgrade-panel .card{grid-template-rows:auto;gap:18px;padding:24px}.upgrade-panel .card .upgrade-icon{width:80px;height:80px}.upgrade-panel .card small{font-size:16px}.stat-change{font-size:21px}}
+@media(max-height:720px) and (min-width:601px){.upgrade-panel .card{grid-template-rows:auto auto 1fr auto auto;gap:14px;padding:20px 16px}.upgrade-panel .card .upgrade-icon{width:76px;height:76px;font-size:48px}.upgrade-panel .card b{font-size:22px}.upgrade-panel .card small{font-size:15px}.upgrade-stat{padding:12px 4px}.stat-label{margin-bottom:8px}.pick-upgrade{padding:10px 6px}}
+
+/* Contenido de cada mejora alineado al borde izquierdo. */
+.upgrade-panel .card{justify-items:start;text-align:left}
+.upgrade-panel .card .upgrade-icon{justify-content:flex-start;padding-left:12px}
+.upgrade-panel .upgrade-stat{text-align:left;padding-left:12px}
+.upgrade-panel .stat-change{justify-content:flex-start}
+.upgrade-panel .pick-upgrade{text-align:left;padding-left:16px}
+
+/* Icono pixel art centrado; los textos conservan su alineación izquierda. */
+.upgrade-panel .card .upgrade-icon{justify-self:center;justify-content:center;padding:0;text-shadow:none}
+.upgrade-icon img{display:block;width:72px;height:66px;image-rendering:pixelated;object-fit:contain}
+@media(max-width:800px){.upgrade-icon img{width:60px;height:55px}}
+@media(max-height:720px) and (min-width:601px){.upgrade-icon img{width:60px;height:55px}}
+
+/* Tarjetas del refugio con la misma distribución que las mejoras de nivel. */
+#lobby .hero-card,#menu-content .hero-card{display:flex;flex-direction:column;align-items:stretch;text-align:left;gap:16px;padding:28px}
+#lobby .hero-card>.pixel-portrait,#menu-content .hero-card>.pixel-portrait{align-self:center;margin:12px 0 20px}
+#lobby .hero-card>h2,#menu-content .hero-card>h2{font-size:25px;margin:0}
+#lobby .hero-card>p,#menu-content .hero-card>p{font-size:16px;margin:0;min-height:0}
+#lobby .hero-card>button,#menu-content .hero-card>button{margin-top:auto;width:100%;padding:16px;text-align:left;font-size:16px}
+.hero-summary{display:grid;gap:0;border-top:2px solid #536f45;border-bottom:2px solid #536f45;background:#10231a;padding:12px;margin-top:auto}
+.hero-summary>span{display:flex;justify-content:space-between;gap:16px;padding:10px 0;color:#b3c2a3;font-size:15px}.hero-summary strong{color:#e2f5ae}
+#lobby .upgrade-icon,#menu-content .upgrade-icon{display:flex;justify-content:center;align-items:center;align-self:center;width:112px;height:112px;background:repeating-conic-gradient(#263f2c 0 25%,#213725 0 50%) 0 0/16px 16px;border:3px solid #76915b;box-shadow:6px 6px #102017,inset 0 0 0 4px #182b1d;margin:12px 0 20px}
+#menu-content .permanent-card{min-height:510px}#menu-content .permanent-card>p{min-height:60px}#menu-content .permanent-card .upgrade-stat{margin-top:auto;padding:20px 12px}
+#menu-content .permanent-card>button{margin-top:4px;background:#c7df86;color:#17251a;border-color:#e5f5b5 #617b40 #617b40 #e5f5b5}
+.permanent-level{display:flex;gap:8px;width:100%;margin-top:8px}.permanent-level>span{height:14px;flex:1;border:2px solid #617b4c;background:#112218}.permanent-level>span.filled{background:#c7df86;border-color:#e4f3b7}.permanent-level-label{font-size:14px;color:#b3c2a3}
+#lobby .guide-card{gap:18px}#lobby .guide-card p{font-size:15px}
+@media(max-width:800px){#lobby .hero-card,#menu-content .hero-card{padding:22px;gap:14px}#lobby .hero-card>h2,#menu-content .hero-card>h2{font-size:22px}.hero-summary>span{font-size:13px}#menu-content .permanent-card{min-height:470px}}
